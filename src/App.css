@@ -1,8 +1,11 @@
+/* Genel uygulama stilleri */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: #CE2829;
+  min-height: 100vh;
+  width: 100vw;          /* Viewport tam genişliği */
+  margin: 0;             /* Margin sıfırla */
+  padding: 0;            /* Padding sıfırla */
+  box-sizing: border-box;
 }
 
 .logo {

@@ -1,0 +1,128 @@
+.pizza-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.pizza-form-card {
+  background: white;
+  border: none;
+  box-shadow: none;
+}
+
+.pizza-form-title {
+  color: #292929;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #292929;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.ingredient-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.ingredient-item:hover {
+  border-color: #FDC913;
+}
+
+.ingredient-item.selected {
+  background-color: #FDC913;
+  border-color: #FDC913;
+}
+
+.ingredient-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.ingredient-item.selected .ingredient-checkbox {
+  background-color: #292929;
+  border-color: #292929;
+  color: white;
+}
+
+.ingredient-checkbox::after {
+  content: '✓';
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.ingredient-item.selected .ingredient-checkbox::after {
+  opacity: 1;
+}
+
+.size-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.size-option {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.size-option.selected {
+  background-color: #FDC913;
+  border-color: #FDC913;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order-summary {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.submit-btn {
+  background-color: #FDC913 !important;
+  border-color: #FDC913 !important;
+  color: #292929 !important;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.submit-btn:disabled {
+  background-color: #5F5F5F !important;
+  border-color: #5F5F5F !important;
+  color: #fff !important;
+}

@@ -1,0 +1,20 @@
+.site-footer {
+    background-color: #CE2829;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100vw;
+    margin: 2rem 0 0 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
