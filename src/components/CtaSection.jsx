@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './hero.css'; // CTA styles are in hero.css
+import './hero.css'; 
 
 const CtaSection = () => {
   return (

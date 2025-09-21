@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { 
   Form, 
   FormGroup, 
@@ -12,6 +13,7 @@ import axios from 'axios';
 import './PizzaForm.css';
 
 const PizzaForm = () => {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     name: '',
     size: '',
@@ -132,7 +134,12 @@ const PizzaForm = () => {
       
       console.log('Gönderilen sipariş verisi:', orderData);
       
-      const response = await axios.post('https://reqres.in/api/pizza', orderData);
+      const response = await axios.post('https://reqres.in/api/pizza', orderData, {
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': 'reqres-free-v1'
+        }
+      });
       
       console.log('API Yanıtı:', response.data);
       console.log('Sipariş Özeti:', {
@@ -150,7 +157,15 @@ const PizzaForm = () => {
         quantity: 1
       });
       
-      alert('Siparişiniz başarıyla alındı!');
+      // SuccessPage'e sipariş verileri ile yönlendir
+      history.push('/success', {
+        orderData: {
+          ...response.data,
+          pizzaName: "Position Absolute Acı Pizza",
+          originalData: orderData,
+          message: 'Siparişiniz başarıyla alındı!'
+        }
+      });
       
     } catch (error) {
       console.error('Sipariş gönderimi hatası:', error);
@@ -341,7 +356,7 @@ const PizzaForm = () => {
             </div>
 
             {/* Sipariş Toplamı */}
-            <div className="order-summary">
+            <div className="pizza-order-total">
               <h6 className="mb-3">Sipariş Toplamı</h6>
               <div className="d-flex justify-content-between mb-2">
                 <span>Seçimler</span>
