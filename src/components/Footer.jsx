@@ -25,6 +25,9 @@ const Footer = () => {
           </div>
         </div>
 
+
+
+
         <div className="footer-middle">
           <h3>Sıccacık Menuler</h3>
           <div className="footer-section">
@@ -36,6 +39,9 @@ const Footer = () => {
             <p>Position Absolute Acı Burger</p>
           </div>
         </div>
+
+
+
 
         <div className="footer-right">
           <h3>Instagram</h3>
@@ -49,6 +55,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+
+      
       
       <div className="footer-copyright">
         <p>&copy; 2023 Teknolojik Yemekler.</p>

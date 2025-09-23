@@ -192,16 +192,51 @@ const PizzaForm = () => {
 
   return (
     <div style={{ backgroundColor: 'white', minHeight: '100vh' }}>
-      {/* Header */}
-      <div style={{ backgroundColor: '#CE2829', color: 'white', padding: '1rem', textAlign: 'center' }}>
-        <h3>Teknolojik Yemekler</h3>
-        <p>Anasayfa - Seçenekler - <strong>Sipariş Oluştur</strong></p>
+      {/* Pizza Görseli ve Breadcrumb */}
+      <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+        <img 
+          src="/public/images/iteration-2-images/pictures/form-banner.png" 
+          alt="Position Absolute Acı Pizza" 
+          style={{ width: '100%', maxWidth: '600px', marginBottom: '2rem' }}
+        />
+        
+        <div style={{ color: '#666', fontSize: '1rem', marginBottom: '2rem' }}>
+          Anasayfa - Seçenekler - <span style={{ color: '#CE2829', fontWeight: 'bold' }}>Sipariş Oluştur</span>
+        </div>
+        
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#333', marginBottom: '1rem' }}>
+          Position Absolute Acı Pizza
+        </h1>
+        
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#333', margin: 0 }}>
+            {calculateTotal().toFixed(2)}₺
+          </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ fontSize: '1.2rem' }}>4.9</span>
+            <span style={{ color: '#666' }}>(200)</span>
+          </div>
+        </div>
+        
+        <p style={{ 
+          color: '#666', 
+          fontSize: '1rem', 
+          lineHeight: '1.6', 
+          maxWidth: '800px', 
+          margin: '0 auto 2rem auto',
+          textAlign: 'left',
+          padding: '0 2rem'
+        }}>
+          Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. 
+          Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra 
+          geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle 
+          yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli 
+          bir yemektir. Küçük bir pizzaya bazen pizzetta denir.
+        </p>
       </div>
       
       <Container className="pizza-form-container py-4">
         <div className="pizza-form-card">
-          <h4 className="pizza-form-title mb-2">Position Absolute Acı Pizza</h4>
-          <h2 className="mb-3">{calculateTotal().toFixed(2)}₺</h2>
           <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
             <span style={{ fontSize: '1.2rem' }}>4.9</span>
             <span>(200)</span>
